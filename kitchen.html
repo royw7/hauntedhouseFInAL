@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="userItem.js"></script>
+<script> 
+    function initialize(){
+        document.getElementById("oven").style.display = "none";
+    }
+    function ovenclick(){
+        document.getElementById("oven").style.display = "block";
+    }
+    function oveninspect(){
+        grabLockPick()
+    }
+
+</script>
+
+<body onload ="initialize()">
+    <img src="https://images.fineartamerica.com/images-medium-large-5/haunted-kitchen-daniel-george.jpg" height ="600" width="800" >
+    <br>    
+    <a href="dininghall.html" target="_parent"><button>Go Forward</button></a>
+    <div id="text">
+        <p>
+            You reach the kitchen. You see even more rats shuffle by.
+        </p>
+        <p> 
+            The decaying carcass on the table distrubs you. You think you see something in the <u onclick="ovenclick()">oven</u>. It looks like the dining hall is ahead.
+        </p>
+
+        <div id="oven">
+            <details>Rats scurry outside the oven only to reveal the bones of a human figure. You see some kind of lockpick wedge between the teeths. You grab it. 
+                <summary onclick="oveninspect()">Open Oven</summary></details>
+        </div>
+    </div>
+    <br>
+    <div id="home">
+        <a href="index.html" target="_parent"><button>Head back to foyer?</button></a>
+    </div>
+</body>
+</html>

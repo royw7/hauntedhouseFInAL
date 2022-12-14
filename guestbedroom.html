@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="userItem.js"></script>
+<script>
+    var saidHi = false
+    var jumped = false
+
+    function button1(){
+        if(saidHi === false){
+        saidHi = true;
+        document.getElementById("button2").innerHTML = "Run"
+        document.getElementById("button1").innerHTML = "Jump towards figure"
+        document.getElementById("text").innerHTML = "<p> You call out hi. The figures stare back for a second before wailing deafeningly. You cover your ears but to no avail. </p> What will you do?"
+        }else if(jumped === false){
+            document.getElementById("text").innerHTML = "<p> You jump towards the figures and they vanish. The wailing stops. There seems to be a box on the floor.</p>"
+            document.getElementById("button1").innerHTML = "Open the box"
+            document.getElementById("button2").innerHTML = "Leave the guest bedroom"
+            jumped = true
+        }else{
+            document.getElementById("text").innerHTML = "<p> You find a key inside. It looks important, you grab it.</p>"
+            grabKey()
+            console.log(keygrabbed())
+            document.getElementById("button").style.display = "none";
+        }
+       
+    }
+</script>
+
+<body onload>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e35656ff-9190-4f2d-85c0-0cd74a1c2ee8/dfbrltj-0b4fb8f3-a9af-4918-b81c-6223a67be819.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UzNTY1NmZmLTkxOTAtNGYyZC04NWMwLTBjZDc0YTFjMmVlOFwvZGZicmx0ai0wYjRmYjhmMy1hOWFmLTQ5MTgtYjgxYy02MjIzYTY3YmU4MTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.IOd4gMu_KELv-TTRD3M5ghcsdidOh8ZePqaT1dWy26c" width="1000" height="800">
+    <br>   
+ 
+    <span id="button">
+    <button onclick = "button1()">   <div id="button1">Say hi</div></button>
+    </span>
+
+    <a href="Hallway.html" target="_parent"><button><div id="button2">Leave the guest bedroom</div></button></a>
+    <div id="text">
+        <p>
+            It seems you entered the guest bedroom. It reaks of rancid lemons.
+        </p>
+        <p> 
+            You see two distorted figures.
+        </p>
+
+    </div>
+    <br>
+    <div id="home">
+        <a href="index.html" target="_parent"><button>Head back to foyer?</button></a>
+    </div>
+</body>
+</html>

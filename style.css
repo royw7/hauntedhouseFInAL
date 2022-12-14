@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    background-color: rgb(22, 19, 19);
+    color: rgb(173, 6, 6);
+}
+
+#text{
+    color: rgb(173, 6, 6);
+}
+
+button{               
+    background-color:rgb(173, 6, 6);
+    color:white;
+    padding: .5%;
+    border: none;
+}
+
+#home button{
+    background-color:rgb(71, 5, 5);
+}

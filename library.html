@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script>
+    function read(num){
+        if(num === 1){
+            document.getElementById("bookText").innerHTML = "It recounts of the story of little red riding hood. The last page depicts her never being saved."
+        }else if(num === 2){
+            document.getElementById("bookText").innerHTML = "There's only one page. It has the numbers 455"
+        }else{
+            document.getElementById("bookText").innerHTML = "You open the first page, book sets itself on fire before you could get a chance to read it."
+            document.getElementById("book3").style.display = "none"
+        }
+    }
+</script>
+
+<body onload>
+    <img src="https://bookstr.com/wp-content/uploads/2022/10/hauntedlibrary.png" height="600" width="1000" >
+    <br>
+    <a href="masterbedroom.html" target="_parent"><button>Go Forward</button></a>
+    <button onclick = "read(1)">Read red book</button>
+    <button onclick = "read(2)">Read grey book</button>
+    <span id="book3"><button onclick = "read(3)">Read black book</button></span>
+    <div id="bookText">
+
+    </div>
+    <div id="text">
+        <p>
+            You swore you saw the shadows of a figure in the glass case. But the scurrying of rats distracted you.
+        </p>
+        <p> 
+           You see some books that interests you.
+        </p>
+
+    </div>
+    <br>
+    <div id="home">
+        <a href="index.html" target="_parent"><button>Head back to foyer?</button></a>
+    </div>
+</body>
+</html>

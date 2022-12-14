@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script>
+    function initialize(){
+
+    }
+    function portraitclick(){
+        document.getElementById("portrait").style.display = "block";
+    }
+
+    function rightDoorClick(){
+        document.getElementById("door").style.display = "block";
+    }
+</script>
+
+<body onload ="initialize()">
+    <img src="https://www.hollywoodreporter.com/wp-content/uploads/2019/06/the_haunting_of_hill_house_production_design.jpg?w=1024">
+    <br>    
+    <a href="kitchen.html" target="_parent"><button>Right Door</button></a>
+    <div id="text">
+        <p>
+            You reach the great room. You see rats scurry by.
+        </p>
+        <p> 
+            You see a entrance to your right.
+        </p>
+
+    </div>
+    <br>
+    <div id="home">
+        <a href="index.html" target="_parent"><button>Head back to foyer?</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="userItem.js"></script>
+<script>
+    var step1 = false
+    function initialize(){
+        document.getElementById("box").style.display = "none";
+    }
+    function button(){
+        var bool = keygrabbed()
+        console.log(bool)
+        console.log(typeof(bool))
+        if(step1 === false){
+            if(bool == true){
+            document.getElementById("chestText").innerHTML = "You unlock the chest to reveal a locked box."
+            document.getElementById("buttonText").innerHTML = "Open locked box"
+            step1 = true
+            }
+            if(bool == false){
+            document.getElementById("chestText").innerHTML = "It seems like you need a key"
+            }
+        }else if(step1){
+            if(pickGrabbed()){
+                document.getElementById("chestText").innerHTML = "You unlocked the box with the pick. You're hesitant to open it."
+                document.getElementById("box").style.display = "block";
+                document.getElementById("button").style.display = "none";
+            }else{
+                document.getElementById("chestText").innerHTML = "A key would fit here. Or maybe another way?"
+            }
+        }
+        
+        
+    }
+</script>
+
+<body onload="initialize()">
+    <img src="https://i.pinimg.com/originals/6c/74/66/6c74664cd007c1bb6b318b81fbd89028.jpg" width="1000" height="800">
+    <br>
+    <span id="button"><button onclick = "button()"><span id="buttonText">Open chest</span></button></span>
+    <span id="box"><a href="openBox.html" target="_parent"><button>Open Box</button></a></span>
+    <div id="chestText">
+        <p> he</p>
+    </div>
+    <div id="text">
+        <p>
+            You reached the master bedroom. 
+         </p>
+         <p> 
+             You see a chest under the bed.
+         </p>
+
+    </div>
+    <br>
+    <div id="home">
+        <a href="index.html" target="_parent"><button>Head back to foyer?</button></a>
+    </div>
+</body>
+</html>

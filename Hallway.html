@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script>
+    function initialize(){
+        document.getElementById("portrait").style.display = "none";
+        document.getElementById("door").style.display = "none";
+    }
+    function portraitclick(){
+        document.getElementById("portrait").style.display = "block";
+    }
+
+    function rightDoorClick(){
+        document.getElementById("door").style.display = "block";
+    }
+</script>
+
+<body onload ="initialize()">
+    <img src="https://i.pinimg.com/originals/7f/bf/3a/7fbf3af1474e3a2abef57ef610c2585f.png">
+    <br>    
+    <button onclick = "rightDoorClick()">Right Door</button>
+    <div id="door">
+        <p>This door is locked. There is no keyhole.</p>
+    </div>
+    <a href="guestbedroom.html" target="_parent"><button>Door Straight Ahead</button></a>
+    <div id="text">
+        <p>
+            You enter through the hallway. You hear the shuffling of rats beneath you.
+        </p>
+        <p> 
+            You see a <u onclick = "portraitclick()">portrait</u> to your right. Next to it is a door, straight ahead is another door.
+        </p>
+
+        <div id="portrait">
+            <details>There seems to be something hidden behind the portrait? <a href="removePainting.html" target="_parent">Remove Painting</a>
+                <summary>Inspect portrait</summary></details>
+        </div>
+    </div>
+    <br>
+    <div id="home">
+        <a href="index.html" target="_parent"><button>Head back to foyer?</button></a>
+    </div>
+</body>
+</html>
